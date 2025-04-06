@@ -19,8 +19,6 @@ builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultDatabase")));
 
 builder.Services.AddFluentValidation();
-
-
 builder.Services.AddValidatorsFromAssembly(typeof(Program).Assembly);
 
 builder.Services.AddAutoMapper(typeof(Program));
